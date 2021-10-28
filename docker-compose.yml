@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  satisfactory:
+    image: docker.ptrampert.com/satisfactory:latest
+    ports:
+      - "15777:15777/udp"
+      - "15000:15000/udp"
+      - "7777:7777/udp"
+    volumes:
+      - "satisfactory_data:/home/satisfactory/.config/Epic/FactoryGame/Saved/"
+volumes:
+  satisfactory_data:
