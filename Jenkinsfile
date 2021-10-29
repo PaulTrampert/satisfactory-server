@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        upstream(upstreamProjects: 'Docker Images/satisfactory/main', threshold: hudson.model.Result.SUCCESS)
+    }
+
     options {
         timestamps()
         buildDiscarder(logRotator(numToKeepStr: '5'))
