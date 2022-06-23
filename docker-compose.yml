@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   satisfactory:
-    image: docker.ptrampert.com/satisfactory:latest
+    image: paultrampert/satisfactory:experimental
     ports:
       - "15777:15777/udp"
       - "15000:15000/udp"
